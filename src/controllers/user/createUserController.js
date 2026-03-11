@@ -1,3 +1,20 @@
-export function createUserController(req, res) {
-    res.send("Exemplo de POST na rota /user/respondida pelo Controller")
+import { createUser } from "../../models/userModels.js";
+
+
+export async function createUserController(req, res) {
+   
+    const user = {
+        avatar: "https://github.com/kellysdb",
+        name: "Kelly Silva",
+        email: "kellysdb25@gmail.com",
+        password: "12345678"
+
+    }
+
+    const result = await createUser(user)
+
+    res.json({
+        message: "User created successfully",
+        user: result
+    });
 }

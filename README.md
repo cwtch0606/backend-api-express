@@ -44,22 +44,51 @@ Observa todos os arquivos que compõe o projeto. Ao salvar uma informação, ele
 - Para que serve o Router do Express.js?
 Para separar um conjunto de rotas em um arquivo separado. Facilita manutenção.
 
+- O que é o padrão de projeto MVC?
+Dividido em 3 camada: Model, View, Controller.
 
-
-**Notas:**
+- Qual a responsabilidade de cada camada?
 
 Model: 
-Definir as regras de negócio - 
+Definir as regras de negócio;
 Validação de dados;
 Acesso os dados do Banco de Dados;
 
+View:
+Camada de apresentação;
+Interface;
+Front-end;
 
 Controller: 
-Controlar do fluxo de entrada, processamento e saída;
+Controle do fluxo da aplicação;
+Entrada, processamento e saída;
 
+- O que é ORM?
+ORM (Object-Relational Mapping ou Mapeamento Objeto-Relacional), 
 
+- Quais as vantagens de utilizar um ORM?
+- Conseguir trocar de bancos de dados com facildade.
 
+# Comandos do Prisma
 
+Instalar o Prisma:
+    npm i prisma -D
+    npm i dotenv -D
+    
+    Para MySQL e Mariadb
+    npm install @prisma/client @prisma/adapter-mariadb mariadb
 
+Init - iniciar o projeto:
+    npx prisma init --datasource-provider mysql --output ../generated/prisma
+
+Gera o banco de dados a partir do schema do Prisma:
+    npx prisma db push
+
+Gera o schema do prisma a partir do banco de dados:
+    npx prisma db pull
+
+Gera as funções para interagir com os modelos mapeados no schema:
+    npx prisma generate
+obs. toda vez que alterar o schema, rodar esse comando.
 
 
