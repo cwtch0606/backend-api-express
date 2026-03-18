@@ -1,3 +1,11 @@
-export function getUserController(req, res) {
-    res.send("Exemplo de GET na rota /user respondida pelo Controller")
+import { getUser } from "../../models/userModels.js";
+
+export async function getUserController(req, res) {
+
+    const result = await getUser()
+
+    res.json({
+        message: "Users retrieved successfully",
+        user: result
+    });
 }

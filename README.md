@@ -52,7 +52,7 @@ Dividido em 3 camada: Model, View, Controller.
 Model: 
 Definir as regras de negócio;
 Validação de dados;
-Acesso os dados do Banco de Dados;
+Acesso ao Banco de Dados;
 
 View:
 Camada de apresentação;

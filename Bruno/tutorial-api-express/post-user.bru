@@ -1,0 +1,20 @@
+meta {
+  name: POST USER
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Kelly",
+    "pass": "123",
+    "email": "kellysdb@gmail.com",
+    "avatar": "https://github.com/kellysdb.png"
+  }
+}
